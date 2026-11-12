@@ -3,7 +3,7 @@ import { Arrow } from "@/components/Arrow";
 import { BookButton } from "@/components/BookButton";
 import { Envelope } from "@/components/Envelope";
 import { Header } from "@/components/Header";
-import { subheader } from "@/lib/copy";
+import { letterTitleLines, subheader } from "@/lib/copy";
 
 export default function HomePage() {
   return (
@@ -31,8 +31,11 @@ export default function HomePage() {
 
           <div className="love">
             <h2>
-              <span className="line">A love letter to my</span>
-              <span className="line">future practice member</span>
+              {letterTitleLines.map((line) => (
+                <span className="line" key={line}>
+                  {line}
+                </span>
+              ))}
             </h2>
             <Link href="/letter" className="text-link">
               Read the Letter <Arrow />

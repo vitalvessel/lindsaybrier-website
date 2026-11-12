@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Envelope } from "@/components/Envelope";
 import { Header } from "@/components/Header";
-import { letterParagraphs, letterSignoff, letterTitle } from "@/lib/copy";
+import {
+  letterParagraphs,
+  letterSignoff,
+  letterTitleLines,
+} from "@/lib/copy";
 
 export const metadata: Metadata = {
-  title: "A love letter",
-  description: "A love letter to my future practice member.",
+  title: "A special letter",
+  description: "A special letter for my future practice member.",
 };
 
 export default function LetterPage() {
@@ -17,7 +21,13 @@ export default function LetterPage() {
           <Envelope />
         </div>
         <article className="letter-sheet">
-          <h1>{letterTitle}</h1>
+          <h1>
+            {letterTitleLines.map((line) => (
+              <span className="line" key={line}>
+                {line}
+              </span>
+            ))}
+          </h1>
           {letterParagraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 24)}>{paragraph}</p>
           ))}

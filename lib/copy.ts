@@ -3,7 +3,12 @@ export const headline = "Feel More Like Your True Self.";
 export const subheader =
   "Your body is so smart. It has been holding what it couldn't meet yet. Together, we help it unwind, gently and specifically, so you can meet life with more of you.";
 
-export const letterTitle = "A love letter to my future practice member";
+export const letterTitle = "A special letter for my future practice member";
+
+export const letterTitleLines = [
+  "A special letter for my",
+  "future practice member",
+] as const;
 
 export const letterParagraphs = [
   "Your body has been holding something, a tightness that never quite left, a pattern that returns even after you did everything you were told. That is intelligence. Your system has been doing the most it could with the resources it had. Stress is a natural part of a human life. Physical, chemical, and emotional stressors come with being here. The work is becoming more able to meet them, and then let them go.",
