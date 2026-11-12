@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Source_Serif_4 } from "next/font/google";
+import { Playfair_Display, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
 const display = Playfair_Display({
@@ -10,7 +10,7 @@ const display = Playfair_Display({
   display: "swap",
 });
 
-const body = Source_Serif_4({
+const body = Source_Sans_3({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-body",

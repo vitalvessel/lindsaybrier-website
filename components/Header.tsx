@@ -6,16 +6,12 @@ export function Header() {
     <header className="site-header">
       <Link href="/" className="logo">
         <img
-          className="logo-mark"
-          src="/images/monogram.webp"
-          alt=""
-          width={483}
-          height={467}
+          className="logo-lockup"
+          src="/images/logo-lockup.webp"
+          alt="Dr. Lindsay Brier, Holistic Chiropractor"
+          width={932}
+          height={249}
         />
-        <span className="logo-text">
-          <span className="logo-name">Dr. Lindsay Brier</span>
-          <span className="logo-tag">Holistic Chiropractor</span>
-        </span>
       </Link>
       <PrimaryNav />
     </header>

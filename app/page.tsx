@@ -8,24 +8,34 @@ import { letterTitleLines, subheader } from "@/lib/copy";
 export default function HomePage() {
   return (
     <>
-      <Header />
       <main id="main">
-        <div className="stage">
+        <div className="stage hero-frame">
+          <Header />
+          <img
+            className="hero-art-full"
+            src="/images/hero-art.webp"
+            width={3000}
+            height={2000}
+            alt=""
+          />
           <div className="hero-copy">
             <h1>
               <span className="line">Feel More Like</span>
               <span className="line">Your True Self.</span>
             </h1>
             <p className="lede">{subheader}</p>
+          </div>
+
+          <div className="book-slot">
             <BookButton />
           </div>
 
           <div className="hero-art">
             <img
-              src="/images/spine.webp"
-              width={864}
-              height={1152}
-              alt="Watercolor of a cream spine flowing through a blue and lavender river, with blush botanical sprigs."
+              src="/images/hero-art.webp"
+              width={3000}
+              height={2000}
+              alt="Watercolor river with a cream spine and botanical sprigs, cropped from the original artwork."
             />
           </div>
 
