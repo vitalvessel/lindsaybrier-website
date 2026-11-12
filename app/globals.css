@@ -1,5 +1,5 @@
 :root {
-  --paper: #f4ebe3;
+  --paper: #f6eee6;
   --paper-deep: #efe2d6;
   --cream: #fbf6f0;
   --burgundy: #6b2438;
@@ -23,10 +23,11 @@ body {
   min-height: 100vh;
   color: var(--burgundy);
   background-color: var(--paper);
-  background-image:
-    radial-gradient(ellipse 58% 42% at -12% -8%, rgba(214, 186, 206, 0.5), transparent 64%),
-    radial-gradient(ellipse 46% 38% at 112% 2%, rgba(176, 198, 226, 0.38), transparent 60%),
-    radial-gradient(ellipse 42% 30% at 78% 108%, rgba(230, 200, 208, 0.32), transparent 62%);
+  background-image: radial-gradient(
+    ellipse 48% 36% at -6% -4%,
+    rgba(214, 190, 214, 0.28),
+    transparent 68%
+  );
   font-family: var(--font-body), "Palatino Linotype", Palatino, serif;
   font-weight: 400;
   line-height: 1.5;
@@ -111,7 +112,7 @@ a {
 }
 
 .logo-mark {
-  width: 52px;
+  width: 58px;
   height: auto;
   flex: none;
 }
@@ -124,20 +125,21 @@ a {
 
 .logo-name {
   font-family: var(--font-display), Georgia, serif;
-  font-weight: 600;
-  font-size: clamp(1.28rem, 2.5vw, 1.95rem);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 2.1vw, 1.8rem);
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .logo-tag {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
-  margin-top: 0.38rem;
-  font-size: 0.58rem;
+  gap: 0.55rem;
+  margin-top: 0.32rem;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 0.56rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   line-height: 1;
   white-space: nowrap;
@@ -196,6 +198,8 @@ a {
   min-height: 48px;
   padding: 0.2rem 1.05rem;
   text-decoration: none;
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 500;
   font-size: 1.05rem;
 }
 
@@ -222,9 +226,9 @@ a {
   margin: 0;
   font-family: var(--font-display), Georgia, serif;
   font-weight: 600;
-  font-size: clamp(2.15rem, 12.4cqi, 5.15rem);
+  font-size: clamp(2.45rem, 7.6vw, 5.15rem);
   line-height: 0.92;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 .hero-copy h1 .line,
@@ -261,12 +265,16 @@ a {
 }
 
 .wash-bloom {
-  inset: -28px -64px -32px -52px;
+  inset: -26px -78px -32px -64px;
   z-index: 0;
-  background: url("/images/wash.webp") center / 100% 100% no-repeat;
-  mask-image: radial-gradient(ellipse 68% 62% at 48% 52%, #000 28%, transparent 74%);
+  background:
+    radial-gradient(ellipse 42% 68% at 18% 60%, rgba(224, 164, 190, 0.92), transparent 68%),
+    radial-gradient(ellipse 50% 76% at 48% 50%, rgba(184, 158, 208, 0.88), transparent 70%),
+    radial-gradient(ellipse 44% 70% at 80% 46%, rgba(146, 170, 214, 0.86), transparent 68%);
+  filter: blur(11px);
+  mask-image: radial-gradient(ellipse 80% 64% at 46% 56%, #000 6%, transparent 74%);
   transform: scale(1);
-  transform-origin: center;
+  transform-origin: 40% 58%;
   transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -298,8 +306,9 @@ a {
   background: var(--cream);
   color: var(--burgundy);
   text-decoration: none;
+  font-family: var(--font-display), Georgia, serif;
   font-weight: 600;
-  font-size: 1.02rem;
+  font-size: 1.12rem;
   line-height: 1;
   white-space: nowrap;
   border: 1px solid rgba(107, 36, 56, 0.08);
@@ -361,11 +370,17 @@ a {
 
 .hero-art img {
   width: auto;
-  max-width: min(100%, 420px);
-  max-height: 360px;
+  max-width: min(100%, 460px);
+  max-height: 420px;
   height: auto;
   object-fit: contain;
   margin-inline: auto;
+}
+
+.envelope-still {
+  display: block;
+  width: min(19.5rem, 86vw);
+  height: auto;
 }
 
 .love h2 {
@@ -568,11 +583,14 @@ a {
 .envelope-wrap-letter {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   width: 100%;
-  margin: 0 auto 2rem;
-  padding-top: 4.5rem;
-  min-height: 19rem;
+  margin: 1.25rem auto 1.75rem;
+  padding-top: 0;
+  min-height: 0;
+}
+
+.envelope-wrap-letter .envelope-still {
+  width: min(24rem, 88vw);
 }
 
 .letter-sheet {
@@ -638,7 +656,7 @@ a {
   }
 
   .logo-mark {
-    width: 72px;
+    width: 78px;
   }
 
   .logo-tag {
@@ -658,8 +676,8 @@ a {
   }
 
   .hero-art img {
-    max-width: min(100%, 480px);
-    max-height: 520px;
+    max-width: min(100%, 560px);
+    max-height: 640px;
   }
 
   .stubs {
@@ -706,56 +724,46 @@ a {
     grid-column: 1;
     grid-row: 1;
     align-self: center;
-    padding-top: 1.5rem;
-  }
-
-  .hero-copy::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 46%;
-    right: -28%;
-    top: 74%;
-    height: 120px;
-    pointer-events: none;
-    background: radial-gradient(
-      ellipse at left,
-      rgba(176, 196, 224, 0.42),
-      rgba(206, 186, 216, 0.18) 48%,
-      transparent 74%
-    );
-    filter: blur(4px);
+    padding-top: 1.75rem;
   }
 
   .stage .hero-art {
     grid-column: 2;
-    grid-row: 1;
-    align-self: center;
+    grid-row: 1 / span 2;
+    align-self: start;
     z-index: 1;
+    margin-top: -1.75rem;
+    pointer-events: none;
   }
 
   .stage .hero-art img {
-    max-width: min(100%, 460px);
-    max-height: 460px;
-    margin-inline: auto;
+    width: min(100%, 540px);
+    max-width: none;
+    max-height: 680px;
+    margin-left: 6%;
+    object-position: center top;
   }
 
   .stage .love {
     grid-column: 1;
     grid-row: 2;
-    align-self: start;
-    padding-top: 0.25rem;
-    padding-bottom: 0;
+    align-self: end;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .stage .envelope-wrap {
     grid-column: 2;
     grid-row: 2;
     z-index: 2;
-    align-self: start;
-    justify-self: center;
+    align-self: end;
+    justify-self: end;
     padding: 0;
-    margin-top: 0.25rem;
+    margin: 1.25rem 0 0.35rem 0;
+  }
+
+  .stage .envelope-still {
+    width: min(21rem, 34vw);
   }
 
   .lede {

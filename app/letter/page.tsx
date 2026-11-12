@@ -14,7 +14,7 @@ export default function LetterPage() {
       <Header />
       <main id="main" className="letter-page">
         <div className="envelope-wrap envelope-wrap-letter">
-          <Envelope open className="envelope-lg" />
+          <Envelope />
         </div>
         <article className="letter-sheet">
           <h1>{letterTitle}</h1>

@@ -23,9 +23,9 @@ export default function HomePage() {
           <div className="hero-art">
             <img
               src="/images/spine.webp"
-              width={701}
+              width={864}
               height={1152}
-              alt="Watercolor illustration of a spine flowing through lavender and blue washes, with botanical sprigs."
+              alt="Watercolor of a cream spine flowing through a blue and lavender river, with blush botanical sprigs."
             />
           </div>
 

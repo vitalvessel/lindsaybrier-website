@@ -9,8 +9,8 @@ export function Header() {
           className="logo-mark"
           src="/images/monogram.webp"
           alt=""
-          width={634}
-          height={733}
+          width={483}
+          height={467}
         />
         <span className="logo-text">
           <span className="logo-name">Dr. Lindsay Brier</span>
